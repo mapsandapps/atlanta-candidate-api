@@ -1,0 +1,17 @@
+<div class="container offices">
+  <% @offices.each do |office| %>
+    <div class="office">
+      <h1 class="office-name"><%= office.name %></h1>
+      <div class="row candidates">
+        <% office.candidates.each do |candidate| %>
+            <div class="col-sm-3 candidate" style="background: url(<%= candidate.photo_url%>) center center no-repeat;">
+              <div class="candidate-name">
+                <h3><%= candidate.first_name + " " + candidate.last_name %></h3>
+              </div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
+

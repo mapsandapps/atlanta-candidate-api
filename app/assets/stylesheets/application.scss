@@ -1,0 +1,20 @@
+@import 'vendor/bootstrap/bootstrap';
+@import "flex";
+@import 'welcome';
+
+.flex-container {
+  @include flexbox();
+}
+
+.flex-item {
+  @include flexbox();
+  @include flex(1);
+}
+
+.horizontal {
+  @include flex-direction(row);
+}
+
+.vertical {
+  @include flex-direction(column);
+}

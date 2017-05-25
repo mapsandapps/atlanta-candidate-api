@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AtlElection2017</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <h1>Atlanta Votes</h1>
+          <h2>November 2017</h2>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>

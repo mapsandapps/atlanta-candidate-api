@@ -1,0 +1,38 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.nav {
+  background: purple;
+  color: white;
+}
+
+
+.office-name {
+  text-decoration: underline;
+}
+
+.offices {
+  @include flex-direction(column);
+}
+
+.candidate {
+  height: 300px;
+  padding: 20px;
+  margin: 2px;
+  color: white;
+  position: relative;
+  background: gray;
+  border: 3px solid blue;
+
+  .candidate-name {
+    text-align: center;
+    position: absolute;
+    height: 50px;
+    background: green;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}

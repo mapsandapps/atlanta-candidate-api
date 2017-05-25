@@ -1,0 +1,1 @@
+json.extract! candidate, :id, :first_name, :last_name, :photo_url, :bio, :email, :website, :facebook, :instagram, :updated_at
