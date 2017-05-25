@@ -1,1 +1,0 @@
-json.district_id @district_id
