@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Quick Start
+* bundle install
+* rake db:seed
+* rails s
+### Endpoints
+* api/candidates (returns all candidates, organized by office)
+* api/candidates/?address=1234 Terminus Rd, Atlanta GA (Returns district for that Atlanta address)
+### TODOS
+* turn todos into issues
+* turn address tool into stand alone item
+* discuss best way to keep candidate information up to date
