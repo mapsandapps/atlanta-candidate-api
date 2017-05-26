@@ -12,7 +12,7 @@ city_wide.each do |office|
   Office.create(name: office)
 end
 (1..12).to_a.each do |district_num|
-  Office.create(name: "City Council", district_id: district_num)
+  Office.create(name: "City Council District #{district_num.to_s}", district_id: district_num)
 end
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'candidates.csv'))
@@ -25,7 +25,7 @@ csv.each do |row|
     )
 
     if (row['District'])
-      candidate.office_id = Office.where(name: 'City Council', district_id: row['District'].to_i).first.id
+      candidate.office_id = Office.where(name: "City Council District #{row['District']}", district_id: row['District'].to_i).first.id
     else
       candidate.office_id = Office.where(name: row['Office']).first.id
     end
