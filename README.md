@@ -2,6 +2,7 @@
 
 ### Quick Start
 * bundle install
+* rake db:migrate
 * rake db:seed
 * rails s
 * edit candidate information through rails admin by going to /admin (generic login info in secrets.yml for now)
