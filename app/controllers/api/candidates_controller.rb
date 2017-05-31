@@ -3,8 +3,18 @@ class Api::CandidatesController < Api::ApiController
 
   def index
     @offices = Office.all
-    if (params[:address])
-      @offices = Office.where(district_id: AddressHelper.get_district_from_address(params[:address]))
+    if (params[:citywide] && params[:address])
+      @district_id = AddressHelper.get_district_from_address(params[:address])
+      @offices = Office.where(district_id: @district_id).or(Office.where(district_id: nil))
+    else
+      if (params[:citywide])
+        @offices = Office.where(district_id: nil)
+      end
+
+      if (params[:address])
+        @district_id = AddressHelper.get_district_from_address(params[:address])
+        @offices = Office.where(district_id: AddressHelper.get_district_from_address(params[:address]))
+      end
     end
 
     render :index
