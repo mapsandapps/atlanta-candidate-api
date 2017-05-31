@@ -16,7 +16,7 @@ class Api::CandidatesController < Api::ApiController
         @offices = []
         @district_id = district
         if district
-          @offices = Office.where(district_id: AddressHelper.get_district_from_address(params[:address]))
+          @offices = Office.where(district_id: district)
         end
       end
     end
