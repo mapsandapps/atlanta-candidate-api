@@ -12,8 +12,12 @@ class Api::CandidatesController < Api::ApiController
       end
 
       if (params[:address])
-        @district_id = AddressHelper.get_district_from_address(params[:address])
-        @offices = Office.where(district_id: AddressHelper.get_district_from_address(params[:address]))
+        district = AddressHelper.get_district_from_address(params[:address])
+        @offices = []
+        @district_id = district
+        if district
+          @offices = Office.where(district_id: AddressHelper.get_district_from_address(params[:address]))
+        end
       end
     end
 

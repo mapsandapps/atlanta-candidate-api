@@ -30,11 +30,15 @@ module AddressHelper
         district.each do |sub_district|
           if (contains_point?(point, sub_district))
             return feature['properties']['DISTRICT']
+          else
+            return nil
           end
         end
       else
         if (contains_point?(point, district))
           return feature['properties']['DISTRICT']
+        else
+          return nil
         end
       end
     end
