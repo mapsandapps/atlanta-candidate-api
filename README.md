@@ -12,3 +12,4 @@
 * api/candidates/?address=1234 Terminus Rd, Atlanta GA (Returns district for that Atlanta address)
 * api/candidates/?citywide=true (Includes citywide candidates)
 * api/districts/:id (returns all candidates for that district)
+* api/candidates/:id (Returns only candidate specified)
