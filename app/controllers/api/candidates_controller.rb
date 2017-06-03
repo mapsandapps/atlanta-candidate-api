@@ -23,4 +23,9 @@ class Api::CandidatesController < Api::ApiController
 
     render :index
   end
+
+  def show
+    @candidate = Candidate.find(params[:id])
+    render :show
+  end
 end
