@@ -1,5 +1,12 @@
 # README
 
+## Prerequisite
+* Postgres
+* Postgres DB `atlanta_candidate_api_development`
+```bash
+$ createdb atlanta_candidate_api_development
+```
+
 ## Quick Start
 
 * bundle install
