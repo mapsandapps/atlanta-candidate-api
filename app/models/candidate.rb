@@ -1,6 +1,6 @@
 class Candidate < ApplicationRecord
-  has_many :issues
-  has_many :mediums
+  # has_many :issues
+  # has_many :mediums
   belongs_to :office
 
   def full_name
