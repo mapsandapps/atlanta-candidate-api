@@ -1,4 +1,4 @@
-class Api::DistrictsController < Api::ApiController
+class Api::V1::DistrictsController < Api::ApiController
   helper AddressHelper
 
   def show

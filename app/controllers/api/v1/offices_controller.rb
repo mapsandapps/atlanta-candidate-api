@@ -1,4 +1,4 @@
-class Api::OfficesController < Api::ApiController
+class Api::V1::OfficesController < Api::ApiController
 
   def show
     @office = Office.find(params[:id])

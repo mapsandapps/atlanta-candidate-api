@@ -1,4 +1,4 @@
-class Api::CandidatesController < Api::ApiController
+class Api::V1::CandidatesController < Api::ApiController
   helper AddressHelper
 
   def index
