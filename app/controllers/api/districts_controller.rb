@@ -1,8 +1,7 @@
 class Api::DistrictsController < Api::ApiController
-  helper AddressHelper
 
-  def show
-    @candidates = Office.where(district_id: params[:id]).first.candidates
-    render :show
+  def index
+    @district_id = params[:address] ? Office.find_district_from_address(params[:address]) : nil
+    render :index
   end
 end
