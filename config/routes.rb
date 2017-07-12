@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, defaults: { format: :json } do
       resources :candidates, only: [:show]
-      resources :districts, only: [:show]
+      resources :districts, only: [:index]
       resources :offices, only: [:index, :show]
     end
   end

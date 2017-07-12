@@ -1,1 +1,0 @@
-json.candidates @candidates, partial: 'api/v1/candidates/candidate', as: :candidate
