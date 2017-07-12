@@ -1,6 +1,4 @@
-class Api::OfficesController < Api::ApiController
-  helper AddressHelper
-
+class Api::V1::OfficesController < Api::ApiController
   def index
     @offices = Office.find_by_params(params)
     render :index

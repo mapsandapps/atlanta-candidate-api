@@ -1,4 +1,5 @@
-class Api::DistrictsController < Api::ApiController
+class Api::V1::DistrictsController < Api::ApiController
+  helper AddressHelper
 
   def index
     @district_id = params[:address] ? Office.find_district_from_address(params[:address]) : nil
