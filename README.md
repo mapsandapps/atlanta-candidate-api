@@ -15,13 +15,15 @@ $ createdb atlanta_candidate_api_development
 * rails s
 * edit candidate information through rails admin by going to /admin (generic login info in secrets.yml for now)
 
-## Endpoints
+## Endpoints (Version 1)
 
-* api/candidates (returns all candidates, organized by office)
-* api/candidates/?address=1234 Terminus Rd, Atlanta GA (Returns district for that Atlanta address)
-* api/candidates/?citywide=true (Includes citywide candidates)
-* api/districts/:id (returns all candidates for that district)
-* api/candidates/:id (Returns only candidate specified)
+* api/v1/offices (returns all offices, with candidates included)
+* api/v1/offices/?district_id=1 (Returns offices with that district id [including candidates])
+* api/v1/offices/?citywide=true (Citywide offices [mayor, at large, etc])
+* use citywide & district_id in combination to return that set of offices
+* api/v1/offices/?slug=city-council-president (include slug param to get back a particular office)
+* api/v1/district/?address=1234 Main St, Atlanta GA (returns district_id for that address)
+* api/v1/candidates/:id (Returns only candidate specified)
 
 ## Development Notes
 
