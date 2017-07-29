@@ -1,1 +1,1 @@
-json.district_id @district_id
+json.search_result @search_result

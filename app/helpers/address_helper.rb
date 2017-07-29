@@ -1,9 +1,22 @@
 module AddressHelper
   def self.get_district_from_address(address)
+    result = {}
     districts_file = File.read("#{Rails.root}/public/javascripts/districts.json")
     @districts_hash = JSON.parse(districts_file)
     location = Geocoder.search(address)[0]
-    location ? district_for_point([location.longitude, location.latitude]) : nil
+    if (location)
+      district_id = district_for_point([location.longitude, location.latitude])
+      if district_id
+        result = { district_id: district_id, address: location.formatted_address, location: { longitude: location.longitude,
+        latitude: location.latitude }, status: "DISTRICT_FOUND"}
+      else
+        result = { district_id: nil, address: location.formatted_address, location: { longitude: location.longitude,
+                                                                                              latitude: location.latitude }, status: "DISTRICT_NOT_FOUND"}
+      end
+    else
+      result = { district_id: nil, address: nil, location: nil, status: "LOCATION_NOT_FOUND" }
+    end
+    return result
   end
 
   def self.contains_point?(point, polygon)
