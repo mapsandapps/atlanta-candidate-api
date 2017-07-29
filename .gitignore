@@ -42,3 +42,7 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+.idea/atlanta-candidate-api.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
