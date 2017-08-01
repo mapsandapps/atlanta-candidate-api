@@ -10,7 +10,9 @@ end
 gem 'rails', '~> 5.1.0'
 
 # Use pg as the production database for Active Record
-gem 'pg'
+# gem 'pg'
+gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

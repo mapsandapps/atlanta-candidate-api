@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613002113) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20170729172419) do
 
   create_table "candidates", force: :cascade do |t|
     t.string "first_name"
@@ -25,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170613002113) do
     t.string "website"
     t.string "facebook"
     t.string "instagram"
-    t.bigint "office_id"
+    t.integer "office_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_dropped_out", default: false
@@ -37,6 +34,7 @@ ActiveRecord::Schema.define(version: 20170613002113) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "district_id"
+    t.integer "education_id"
   end
 
 end
