@@ -14,7 +14,10 @@ module AtlElection2017
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins /https:\/\/codeforatlanta\.github\.io/
-        #origins /https:\/\/codeforatlanta\.github\.com/
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+      allow do
+        origins /https:\/\/atl\.vote/
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
